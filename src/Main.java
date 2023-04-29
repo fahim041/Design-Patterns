@@ -1,21 +1,13 @@
-import memento.Editor;
-import memento.History;
+import state.BrushTool;
+import state.Canvas;
+
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        Editor editor = new Editor();
-        History history = new History();
-
-        editor.setContent("a");
-        history.push(editor.createState());
-
-        editor.setContent("b");
-        history.push(editor.createState());
-
-        editor.setContent("c");
-        editor.restore(history.pop());
-        editor.restore(history.pop());
-
-        System.out.println(editor.getContent());
+        var canvas = new Canvas();
+        canvas.setToolType(new BrushTool());
+        canvas.mouseDown();
+        canvas.mouseUp();
     }
 }
