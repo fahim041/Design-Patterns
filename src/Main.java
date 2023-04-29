@@ -1,10 +1,8 @@
-import strategy.BlackAndWhiteFilter;
-import strategy.ImageStorage;
-import strategy.JpegCompressor;
+import template.TransferMoneyTask;
 
 public class Main {
     public static void main(String[] args) {
-        ImageStorage imageStorage = new ImageStorage();
-        imageStorage.store("a", new JpegCompressor(), new BlackAndWhiteFilter());
+       var task = new TransferMoneyTask();
+       task.execute();
     }
 }
