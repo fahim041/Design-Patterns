@@ -1,8 +1,7 @@
-import template.TransferMoneyTask;
-
 public class Main {
     public static void main(String[] args) {
-       var task = new TransferMoneyTask();
-       task.execute();
+        String s = "Hello";
+        char[] c = s.toCharArray();
+        System.out.println(c.length);
     }
 }
