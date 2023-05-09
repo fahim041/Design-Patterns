@@ -1,12 +1,12 @@
-import chainOfResponsibility.*;
+import adapter.CaramelFilter;
+import adapter.Image;
+import adapter.ImageView;
+import adapter.VividFilter;
+import adapter.avaFilter.Caramel;
 
 public class Main {
     public static void main(String[] args) {
-        var compressor = new Compressor(null);
-        var logger = new Logger(compressor);
-        var auth = new Authenticator(logger);
-
-        var server = new WebServer(auth);
-        server.handle(new HttpRequest("admin", "1234"));
+        var imageView = new ImageView(new Image());
+        imageView.apply(new CaramelFilter(new Caramel()));
     }
 }
