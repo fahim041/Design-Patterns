@@ -1,12 +1,7 @@
-import adapter.CaramelFilter;
-import adapter.Image;
-import adapter.ImageView;
-import adapter.VividFilter;
-import adapter.avaFilter.Caramel;
+import factory_method.Store;
 
 public class Main {
     public static void main(String[] args) {
-        var imageView = new ImageView(new Image());
-        imageView.apply(new CaramelFilter(new Caramel()));
+        Store.runStore();
     }
 }
