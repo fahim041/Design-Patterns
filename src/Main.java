@@ -1,7 +1,11 @@
-import factory_method.Store;
+import singleton.PrintService;
 
 public class Main {
     public static void main(String[] args) {
-        Store.runStore();
+        PrintService service1 = PrintService.getInstance();
+        PrintService service2 = PrintService.getInstance();
+
+        System.out.println(service1);
+        System.out.println(service2);
     }
 }
