@@ -1,4 +1,4 @@
-package factory_method;
+package gof.factory_method;
 
 public abstract class Burger {
     private String name;

@@ -1,4 +1,4 @@
-package singleton;
+package gof.singleton;
 
 public class PrintService {
     private static PrintService instance = null;

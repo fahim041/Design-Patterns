@@ -1,4 +1,4 @@
-package factory_method;
+package gof.factory_method;
 
 public class VeganBurger extends Burger{
     public VeganBurger(String name, String bread) {
